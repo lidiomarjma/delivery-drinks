@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -54,18 +55,18 @@
           />
 
           <div>
-            <p class="font-bold">Drink 700ml</p>
+            <p class="font-bold">Pastel de Carne</p>
             <p class="text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
               accusantium.
             </p>
 
             <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="text-lg font-bold">R$ 15.00</p>
+              <p class="text-lg font-bold">R$ 35.00</p>
               <button
                 class="bg-gray-800 px-5 rounded hover:scale-110 hover:-rotate-3 duration-300 add-to-cart-btn"
-                data-name="Drink 700ml"
-                data-price="15.00"
+                data-name="Pastel de Carne"
+                data-price="35.00"
               >
                 <i class="bi bi-cart-plus-fill text-lg text-white"></i>
               </button>
@@ -81,18 +82,18 @@
           />
 
           <div>
-            <p class="font-bold">Drink 700ml</p>
+            <p class="font-bold">Pastel de Frango com Catupiri</p>
             <p class="text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
               accusantium.
             </p>
 
             <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="text-lg font-bold">R$ 15.00</p>
+              <p class="text-lg font-bold">R$ 32.00</p>
               <button
                 class="bg-gray-800 px-5 rounded hover:scale-110 hover:-rotate-3 duration-300 add-to-cart-btn"
-                data-name="Drink 700ml"
-                data-price="15.00"
+                data-name="Pastel de Frango com Catupiri"
+                data-price="32.00"
               >
                 <i class="bi bi-cart-plus-fill text-lg text-white"></i>
               </button>
@@ -108,18 +109,18 @@
           />
 
           <div>
-            <p class="font-bold">Drink 700ml</p>
+            <p class="font-bold">Pastel de Frango</p>
             <p class="text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
               accusantium.
             </p>
 
             <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="text-lg font-bold">R$ 15.00</p>
+              <p class="text-lg font-bold">R$ 30.00</p>
               <button
                 class="bg-gray-800 px-5 rounded hover:scale-110 hover:-rotate-3 duration-300 add-to-cart-btn"
-                data-name="Drink 700ml"
-                data-price="15.00"
+                data-name="Pastel de Frango"
+                data-price="30.00"
               >
                 <i class="bi bi-cart-plus-fill text-lg text-white"></i>
               </button>
@@ -135,18 +136,18 @@
           />
 
           <div>
-            <p class="font-bold">Drink 700ml</p>
+            <p class="font-bold">Pastel de Calabresa</p>
             <p class="text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
               accusantium.
             </p>
 
             <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="text-lg font-bold">R$ 15.00</p>
+              <p class="text-lg font-bold">R$ 35.00</p>
               <button
                 class="bg-gray-800 px-5 rounded hover:scale-110 hover:-rotate-3 duration-300 add-to-cart-btn"
-                data-name="Drink 700ml"
-                data-price="15.00"
+                data-name="Pastel de Calabresa"
+                data-price="35.00"
               >
                 <i class="bi bi-cart-plus-fill text-lg text-white"></i>
               </button>
@@ -171,14 +172,14 @@
           />
 
           <div class="w-full">
-            <p class="font-bold">Drink 700ml</p>
+            <p class="font-bold">Porsão de 800ml</p>
 
             <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="text-lg font-bold">R$ 15.00</p>
+              <p class="text-lg font-bold">R$ 12.00</p>
               <button
                 class="bg-gray-800 px-5 rounded hover:scale-110 hover:-rotate-3 duration-300 add-to-cart-btn"
-                data-name="Drink 700ml"
-                data-price="15.00"
+                data-name="Porsão de 800ml"
+                data-price="12.00"
               >
                 <i class="bi bi-cart-plus-fill text-lg text-white"></i>
               </button>
@@ -194,14 +195,14 @@
           />
 
           <div class="w-full">
-            <p class="font-bold">Drink 700ml</p>
+            <p class="font-bold">Porsão de 700ml</p>
 
             <div class="flex items-center gap-2 justify-between mt-3">
-              <p class="text-lg font-bold">R$ 15.00</p>
+              <p class="text-lg font-bold">R$ 10.00</p>
               <button
                 class="bg-gray-800 px-5 rounded hover:scale-110 hover:-rotate-3 duration-300 add-to-cart-btn"
-                data-name="Drink 700ml"
-                data-price="15.00"
+                data-name="Porsão 700ml"
+                data-price="10.00"
               >
                 <i class="bi bi-cart-plus-fill text-lg text-white"></i>
               </button>
@@ -213,6 +214,7 @@
 
     <div
       class="bg-black/65 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+      id="cart-modal"
     >
       <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
         <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
@@ -226,6 +228,8 @@
           type="text"
           placeholder="Digite seu endereço completo..."
           id="address"
+          name="address"
+          autocomplete="street-address"
           class="w-full border-2 p-1 rounded my-1"
         />
         <p class="text-red-500 hidden" id="address-warn">
@@ -254,5 +258,8 @@
         <i class="bi bi-cart-plus-fill text-lg text-white"></i>
       </button>
     </footer>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>
